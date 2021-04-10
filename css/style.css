@@ -1,10 +1,12 @@
 :root {
-    --blak-color     : #222222;
-    --pink-color     : #F1E4E6;
-    --dark-pink-color: #F16D7F;
-    --white-color    : #FFFFFF;
-    --grey-color     : #F8F8F8;
-    --dark-grey-color: #5D5D5D;
+    --blak-color       : #222222;
+    --pink-color       : #F1E4E6;
+    --dark-pink-color  : #F16D7F;
+    --white-color      : #FFFFFF;
+    --grey-color       : #F8F8F8;
+    --dark-grey-color  : #5D5D5D;
+    --grey-light-color : #E1E1E1;
+    --grey-lights-color: #B1B1B1;
 }
 
 body {
@@ -41,6 +43,15 @@ header {
     display: none;
 }
 
+.search {
+    fill: var(--grey-color)
+}
+
+.search:hover {
+    fill: var(--dark-pink-color);
+
+}
+
 .header_container {
     display        : flex;
     justify-content: space-between;
@@ -58,8 +69,30 @@ header {
     margin          : 0 33px 0 0;
 }
 
+.header_button-burger {
+    fill: var(--grey-color);
+}
+
+.header_button-burger:hover {
+    fill: var(--dark-pink-color);
+}
+
+
 .header_link {
     margin: 0 33px 0 0;
+    fill  : var(--grey-color);
+}
+
+.header_link:hover {
+    fill: var(--dark-pink-color);
+}
+
+.header_basret {
+    fill: var(--grey-color);
+}
+
+.header_basret:hover {
+    fill: var(--dark-pink-color);
 }
 
 .brand {
@@ -218,8 +251,14 @@ header {
     margin          : 48px 0 96px 0;
     background-color: var(--white-color);
     padding         : 14px 38px;
-    border-color    : var(--dark-pink-color);
+    border          : solid;
     width           : 220px;
+}
+
+.product_button:active {
+    background-color: var(--dark-pink-color);
+    color           : var(--white-color);
+
 }
 
 .product_button_bt {
@@ -270,7 +309,6 @@ header {
     line-height  : 24px;
     color        : var(--white-color);
     margin-bottom: 16px;
-
 }
 
 footer {
@@ -325,7 +363,7 @@ footer {
     text-transform: uppercase;
     font-weight   : 400;
     line-height   : 30px;
-    text-align    :center;
+    text-align    : center;
 }
 
 .footer-text_title {
@@ -366,4 +404,222 @@ footer {
     display        : flex;
     flex-direction : row;
     justify-content: space-between;
+}
+
+.footer-form {
+    display: flex;
+}
+
+.footer-form input {
+
+    height          : 49px;
+    width           : 256px;
+    margin-top      : 32px;
+    border-radius   : 20px 0 0 20px;
+    font-family     : Lato;
+    font-size       : 14px;
+    font-weight     : 400;
+    line-height     : 17px;
+    background-color: var(--grey-light-color);
+    padding         : 0 0 0 15px;
+    border          : none;
+    box-sizing      : border-box;
+}
+
+.footer-form button {
+    margin-top      : 32px;
+    border-radius   : 0 20px 20px 0;
+    background-color: var(--dark-pink-color);
+    color           : var(--white-color);
+    font-family     : Lato;
+    font-size       : 14px;
+    font-weight     : 400;
+    line-height     : 17px;
+    border          : none;
+    width           : 100px;
+}
+
+.footer-form input:hover,
+.footer-form input:focus,
+.footer-form button:active,
+.product_button:active,
+.product_button:focus {
+    outline   : 0;
+    box-shadow: 0 0 0 0.15rem rgb(25 82 167 / 50%);
+}
+
+.footer-form button:focus {
+    outline: 0;
+}
+
+.icon {
+    background-color: var(--white-color);
+    margin          : 0 10px 0 0;
+    padding         : 8px;
+}
+
+.icon:hover {
+    fill            : var(--white-color);
+    background-color: var(--dark-pink-color);
+}
+
+/* Страница регистрации */
+
+.registr-forma {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+}
+
+.registr-title {
+    background-color: var(--grey-color);
+    max-width       : 1600px;
+    margin          : 0 auto;
+}
+
+.registr-text {
+    padding    : 60px 0 60px 230px;
+    font-size  : 24px;
+    font-weight: 400;
+    line-height: 29px;
+    color      : var(--dark-pink-color);
+}
+
+.registr-name {
+    margin: 64px 0 0 0;
+}
+
+.radio {
+    display: none;
+}
+
+.radio-ladel:before {
+    position     : absolute;
+    left         : -30px;
+    width        : 17px;
+    height       : 17px;
+    border       : 1px solid #A4A4A4;
+    content      : "";
+    border-radius: 50%;
+}
+
+.radio-ladel::after {
+    position     : absolute;
+    left         : -26px;
+    top          : 4px;
+    width        : 8px;
+    height       : 8px;
+    border       : 1px solid #A4A4A4;
+    content      : "";
+    border-radius: 50%;
+    background   : var(--white-color);
+    display      : none;
+}
+
+.radio-ladel {
+    position: relative;
+    margin  : 0 47px 0 30px;
+}
+
+.radio:checked+.radio-ladel:before {
+    background: var(--dark-pink-color);
+}
+
+.radio:checked+.radio-ladel:after {
+    display: block;
+}
+
+#name,
+#email,
+#password {
+    width     : 360px;
+    height    : 45px;
+    margin-top: 20px;
+}
+
+.registr-radio {
+    display       : flex;
+    flex-direction: row;
+    margin        : 32px 0 33px 0;
+}
+
+
+.registr-login_text {
+    font-size  : 13px;
+    font-weight: 300;
+    line-height: 16px;
+    color      : var(--grey-lights-color);
+    margin     : 15px 0 39px 0;
+    width      : 360px;
+}
+
+::placeholder {
+    color  : var(--grey-lights-color);
+    padding: 0 0 0 17px;
+}
+
+.registr-title_text {
+
+    font-size  : 16px;
+    font-weight: 300;
+    line-height: 19px;
+}
+
+
+.loyalty-title {
+    font-size  : 24px;
+    font-weight: 300;
+    line-height: 29px;
+    margin     : 64px 0 22px 0;
+}
+
+.registr_button {
+    background-color: var(--dark-pink-color);
+    color           : var(--white-color);
+    padding         : 17px 66px 17px 29px;
+    border          : 0;
+    position        : relative;
+    font-size       : 14px;
+    font-weight     : 400;
+    line-height     : 17px;
+    margin          : 0 0 96px 0;
+}
+
+.registr_button:hover,
+.registr_button:focus,
+.registr-forma input:hover,
+.registr-forma input:focus {
+    outline     : 0;
+    box-shadow  : 0 0 0 0.15rem rgb(25 82 167 / 50%);
+    border-color: white;
+
+}
+
+.registr_button::after {
+    content : url(../img/direction.svg);
+    position: absolute;
+    right   : 25px;
+}
+
+.loyalty-title_text {
+    font-size    : 24px;
+    font-weight  : 300;
+    line-height  : 29px;
+    margin-bottom: 21px;
+}
+
+.loyalty-text {
+    font-size    : 24px;
+    font-weight  : 300;
+    line-height  : 29px;
+    position     : relative;
+    margin-bottom: 16px;
+}
+
+.loyalty-text::before {
+    content : url(../img/Vector.svg);
+    position: absolute;
+    width   : 20px;
+    height  : 16px;
+    left    : -35px;
 }
