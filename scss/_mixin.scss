@@ -1,0 +1,30 @@
+@mixin font($size, $height, $weight) {
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+}
+
+@mixin title-block() {
+    &-title {
+        background-color: $grey-color;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    &-text {
+        padding: 60px 0 60px 230px;
+        @include font(24px, 29px, 400);
+        color: $dark-pink-color;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: $desktop-width) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: $tablet-width) {
+        @content;
+    }
+}

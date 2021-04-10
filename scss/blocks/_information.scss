@@ -1,0 +1,41 @@
+.information {
+    &-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-description {
+        margin: 28px 0 104px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    & {
+        background-color: $black-color;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    &-img {
+        margin-top: 104px;
+    }
+
+    &-description_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-text {
+        text-align: center;
+        @include font(14px, 17px, 300);
+        color: $white-color;
+    }
+
+    &-title {
+        @include font(20px, 24px, 400);
+        color: $white-color;
+        margin-bottom: 16px;
+    }
+}

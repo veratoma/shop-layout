@@ -1,0 +1,52 @@
+.promotions {
+    max-width: 1140px;
+
+    &_list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 96px;
+    }
+
+    &_item {
+        width: 360px;
+        min-height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &_item--women {
+        background-image: url(../img/forwomen.png);
+        background-size: cover;
+    }
+
+    &_item--men {
+        background-image: url(../img/forman.png);
+        background-size: cover;
+    }
+
+    &_item--kids {
+        background-image: url(../img/forkids.png);
+        background-size: cover;
+    }
+
+    &_item--accesories {
+        background-image: url(../img/accesories.png);
+        background-size: cover;
+        width: 100%;
+        margin: 30px 0 0 0;
+    }
+    &_text {
+        @include font(16px, 19px, 400);
+        color: $white-color;
+        text-transform: uppercase;
+    }
+
+    &_title {
+        @include font(24px, 29px, 700);
+        color: $dark-pink-color;
+        text-transform: uppercase;
+    }
+}

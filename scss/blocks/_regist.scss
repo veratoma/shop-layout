@@ -1,0 +1,136 @@
+.registr {
+    &-forma {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include title-block();
+
+    &-name {
+        margin: 64px 0 0 0;
+    }
+
+    &-radio {
+        display: flex;
+        flex-direction: row;
+        margin: 32px 0 33px 0;
+
+        .radio {
+            &-input {
+                display: none;
+            }
+
+            &-ladel {
+                position: relative;
+                margin: 0 47px 0 30px;
+            }
+
+            &-ladel:before {
+                position: absolute;
+                left: -30px;
+                width: 17px;
+                height: 17px;
+                border: 1px solid #a4a4a4;
+                content: "";
+                border-radius: 50%;
+            }
+
+            &-ladel:after {
+                position: absolute;
+                left: -26px;
+                top: 4px;
+                width: 8px;
+                height: 8px;
+                border: 1px solid #a4a4a4;
+                content: "";
+                border-radius: 50%;
+                background: $white-color;
+                display: none;
+            }
+
+            &-ladel:checked + &-ladel:before {
+                background: $dark-pink-color;
+            }
+
+            &-ladel:checked + &-ladel:after {
+                display: block;
+            }
+        }
+    }
+
+    &-login_text {
+        @include font(13px, 16px, 300);
+        color: $grey-lights-color;
+        margin: 15px 0 39px 0;
+        width: 360px;
+    }
+
+    &-title_text {
+        @include font(13px, 16px, 300);
+    }
+
+    &_button {
+        background-color: $dark-pink-color;
+        color: $white-color;
+        padding: 17px 66px 17px 29px;
+        border: 0;
+        position: relative;
+        @include font(14px, 17px, 400);
+        margin: 0 0 96px 0;
+    }
+
+    &_button:hover,
+    &_button:focus,
+    &-forma input:hover {
+        outline: 0;
+        box-shadow: $blue-color;
+        border-color: $white-color;
+    }
+
+    &_button:after {
+        content: url(../img/direction.svg);
+        position: absolute;
+        right: 25px;
+    }
+
+    &-name_input {
+        width: 360px;
+        height: 45px;
+        margin-top: 20px;
+        border: 1px solid $border-color;
+    }
+
+    ::placeholder {
+        color: $grey-lights-color;
+        padding: 0 0 0 17px;
+    }
+
+    .loyalty {
+        margin: 0 0 0 120px;
+
+        &-title {
+            @include font(24px, 29px, 300);
+            margin: 64px 0 22px 0;
+        }
+
+        &-title_text {
+            @include font(24px, 29px, 300);
+            margin-bottom: 21px;
+        }
+
+        &-text {
+            @include font(24px, 29px, 300);
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        &-text::before {
+            content: url(../img/Vector.svg);
+            position: absolute;
+            width: 20px;
+            height: 16px;
+            left: -35px;
+        }
+    }
+}

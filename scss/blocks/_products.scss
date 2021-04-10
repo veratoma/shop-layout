@@ -1,0 +1,79 @@
+.products {
+    max-width: 1140px;
+
+    &_title {
+        @include font(30px, 36px, 400);
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    &_text {
+        @include font(14px, 17px, 400);
+        color: $dark-grey-color;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+
+    &_list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &_item {
+        width: 360px;
+        .product {
+            &_description {
+                background-color: $grey-color;
+                padding: 25px 29px 20px 17px;
+            }
+
+            &_img {
+                display: block;
+            }
+
+            &_title {
+                @include font(13px, 16px, 400);
+                text-transform: uppercase;
+                margin-bottom: 13px;
+                color: $black-color;
+            }
+
+            &_text {
+                @include font(14px, 17px, 300);
+                margin-bottom: 18px;
+                color: $dark-grey-color;
+            }
+
+            &_price {
+                @include font(16px, 19px, 400);
+                color: $dark-pink-color;
+            }
+        }
+    }
+    &_button {
+        @include font(16px, 19px, 400);
+        color: $dark-pink-color;
+        margin: 48px 0 96px 0;
+        background-color: $white-color;
+        padding: 14px 38px;
+        border: solid;
+        width: 220px;
+    }
+
+    &_button:active {
+        background-color: $dark-pink-color;
+        color: $white-color;
+        outline: 0;
+    }
+
+    &_button_bt {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    &_button:focus {
+        outline: 0;
+    }
+}

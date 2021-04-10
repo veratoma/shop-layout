@@ -1,0 +1,61 @@
+.header {
+    & {
+        max-width: 1600px;
+        margin: 0 auto;
+        background-color: $black-color;
+    }
+
+    &_navigation {
+        display: none;
+    }
+
+    &_container {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+
+    &_logo {
+        margin: 0 41px 0 0;
+    }
+
+    &_button {
+        background-color: transparent;
+        border: none;
+        margin: 0 33px 0 0;
+    }
+
+    &_button-burger,
+    &_link,
+    &_basret,
+    &_search {
+        fill: $grey-color;
+    }
+
+    &_button-burger:hover,
+    &_link:hover,
+    &_basret:hover,
+    &_search:hover {
+        fill: $dark-pink-color;
+    }
+
+    &_link {
+        margin: 0 33px 0 0;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .header {
+        padding: 0 16px;
+        &_link {
+            display: none;
+            fill: none;
+        }
+
+        &_basret {
+            display: none;
+            fill: none;
+        }
+    }
+}
