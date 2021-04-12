@@ -1,0 +1,178 @@
+.cart {
+    @include title-block();
+
+    &-product_item {
+        display: flex;
+        flex-direction: row;
+        width: 652px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        margin-bottom: 40px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__product--box {
+        margin-top: 96px;
+    }
+
+    &-product_title {
+        @include font(24px, 29px, 400);
+        width: 200px;
+        margin-bottom: 42px;
+        position: relative;
+    }
+
+    &-product_title::before {
+        content: url(/img/close.svg);
+        position: absolute;
+        left: 320px;
+    }
+
+    &-product_text {
+        @include font(22px, 26px, 400);
+        color: $grey-grey-color;
+        margin-bottom: 6px;
+    }
+
+    &-product_money {
+        @include font(22px, 26px, 400);
+        color: $dark-pink-color;
+        margin: 0 0 0 4px;
+    }
+    &-product_prace {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-product_quantity {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-product_description {
+        margin: 22px 0 0 31px;
+    }
+
+    &-product_number {
+        margin: 0 0 0 24px;
+        width: 44px;
+        border: 1px solid $grey-lights-color;
+    }
+
+    ::placeholder {
+        color: $grey-grey-color;
+        padding: 0 0 0 16px;
+        @include font(18px, 22px, 400);
+    }
+
+    &-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &-button_text {
+        @include font(14px, 17px, 300);
+        text-align: center;
+        padding: 17px 40px;
+        border: 1px solid $grey-lights-color;
+        margin: 33px 0 128px 0;
+    }
+
+    &__box {
+        margin: 113px 0 0 128px;
+    }
+
+    &__adress {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__adress--title {
+        margin-bottom: 21px;
+        @include font(16px, 19px, 300);
+    }
+
+    &__adress--input {
+        border: 1px solid $border-color;
+        @include font(13px, 16px, 300);
+        width: 360px;
+        height: 45px;
+        margin-bottom: 20px;
+    }
+
+    &__adress--input::placeholder {
+        color: $placeholder-color;
+    }
+
+    &__adress--button {
+        @include font(11px, 13px, 300);
+        line-height: 13px;
+        color: $border-color;
+        border: 1px solid $border-color;
+        background-color: $white-color;
+        height: 35px;
+        width: 100px;
+    }
+
+    &__checkout {
+        background-color: $grey1-color;
+        margin-top: 57px;
+    }
+
+    &__checkout--sub {
+        display: flex;
+        flex-direction: row;
+        padding: 39px 34px 12px 218px;
+    }
+
+    &__checkout--text {
+        @include font(11px, 13px, 400);
+        color: $dark-grey-color;
+        margin-left: 13px;
+    }
+
+    &__checkout--title {
+        @include font(16px, 19px, 700);
+        color: $dark-grey-color;
+    }
+
+    &__checkout--grand {
+        display: flex;
+        flex-direction: row;
+        padding: 0 37px 21px 160px;
+    }
+
+    &__checkout--check {
+        color: $dark-pink-color;
+        margin-left: 15px;
+    }
+
+    &__checkout--line {
+        width: 275px;
+        color: $line-color;
+        height: 1px;
+    }
+
+    &__checkout--button {
+        background-color: $dark-pink-color;
+        @include font(16px, 19px, 300);
+        color: $white-color;
+        padding: 15px 42px;
+        margin: 17px 0 42px 44px;
+        border: 0;
+    }
+
+    &__checkout--button:hover,
+    &__adress--button:hover,
+    &-button_text:hover,
+    &__adress--input:hover {
+        outline: 0;
+        box-shadow: $blue-color;
+        border-color: $white-color;
+    }
+}

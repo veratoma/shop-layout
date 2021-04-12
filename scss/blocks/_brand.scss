@@ -1,0 +1,50 @@
+.brand {
+    max-width: 1600px;
+    display: flex;
+    margin: 0 auto 63px auto;
+    @include tablet {
+        min-height: 363px;
+    }
+
+    &_title-container {
+        background-color: $pink-color;
+        flex-grow: 1;
+        padding: 0 0 0 92px;
+        display: flex;
+        align-items: center;
+        @include tablet {
+            padding: 0 0 0 67px;
+        }
+    }
+
+    &_title {
+        @include font(48px, 58px, 900);
+        text-transform: uppercase;
+
+        @include tablet {
+            @include font(44px, 52px, 900);
+        }
+    }
+
+    &_sub-title {
+        @include font(31px, 37px, 700);
+        display: block;
+        @include tablet {
+            @include font(24px, 28px, 700);
+        }
+    }
+
+    &_pink-sub-title {
+        color: $dark-pink-color;
+    }
+
+    &_img {
+        width: 50%;
+        height: auto;
+        background-color: $pink-color;
+
+        @include tablet {
+            display: none;
+        }
+    }
+}
