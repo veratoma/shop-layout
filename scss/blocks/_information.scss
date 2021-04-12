@@ -2,6 +2,12 @@
     &-list {
         display: flex;
         justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+        }
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &-description {
@@ -9,8 +15,13 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        @include mobile {
+            margin: 28px 0 48px 0;
+        }
+        @include tablet {
+            margin: 28px 0 48px 0;
+        }
     }
-
     & {
         background-color: $black-color;
         max-width: 1600px;
@@ -19,6 +30,12 @@
 
     &-img {
         margin-top: 104px;
+        @include mobile {
+            margin-top: 48px;
+        }
+        @include tablet {
+            margin-top: 48px;
+        }
     }
 
     &-description_img {

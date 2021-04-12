@@ -18,10 +18,21 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        @include mobile {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     &_item {
         width: 360px;
+        margin: 0 0 30px 0;
+        @include mobile {
+            padding: 0 15px;
+        }
+        @include mobile {
+            width: 96%;
+        }
         .product {
             &_description {
                 background-color: $grey-color;
@@ -30,6 +41,9 @@
 
             &_img {
                 display: block;
+                @include mobile {
+                    width: 96%;
+                }
             }
 
             &_title {
@@ -54,7 +68,7 @@
     &_button {
         @include font(16px, 19px, 400);
         color: $dark-pink-color;
-        margin: 48px 0 96px 0;
+        margin: 18px 0 96px 0;
         background-color: $white-color;
         padding: 14px 38px;
         border: solid;

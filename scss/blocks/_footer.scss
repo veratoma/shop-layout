@@ -4,8 +4,16 @@
 
     &-container {
         min-height: 448px;
-        background-image: url(../img/footer.png);
+        background-image: url(/img/footer.png);
         display: flex;
+        @include tablet {
+            height: 693px;
+            background-image: url(/img/footer.jpg);
+        }
+        @include mobile {
+            height: 550px;
+            background-image: url(/img/footer.jpg);
+        }
     }
 
     &-title {
@@ -13,6 +21,9 @@
         font-style: italic;
         width: 356px;
         text-align: center;
+        @include mobile {
+            @include font(18px, 22px, 400);
+        }
     }
 
     &-img {
@@ -25,12 +36,21 @@
         justify-content: center;
         align-items: center;
         margin-top: 86px;
+        @include tablet {
+            margin-top: 53px;
+        }
+        @include mobile {
+            margin-top: 53px;
+        }
     }
 
     &-container_items {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &-connection {
@@ -40,21 +60,29 @@
         flex-direction: column;
         justify-content: center;
         margin-top: 150px;
+        @include tablet {
+            margin-top: 48px;
+        }
+        @include mobile {
+            margin-top: 59px;
+        }
     }
 
     &-text {
-        font-size: 18px;
+        @include font(18px, 30px, 400);
         text-transform: uppercase;
-        font-weight: 400;
-        line-height: 30px;
         text-align: center;
+        @include mobile {
+            @include font(14px, 21px, 400);
+        }
     }
 
     &-text_title {
-        font-size: 24px;
+        @include font(24px, 40px, 700);
         text-transform: uppercase;
-        font-weight: 700;
-        line-height: 40px;
+        @include tablet {
+            @include font(18px, 28px, 400);
+        }
     }
 
     &-copyrigh {
@@ -68,6 +96,10 @@
         margin: 30px 0;
         color: $white-color;
         @include font(16px, 19px, 400);
+        @include mobile {
+            text-align: center;
+            margin-bottom: 9px;
+        }
     }
 
     &-network_img {
@@ -86,6 +118,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+            flex-flow: wrap-reverse;
+            justify-content: center;
+        }
     }
 
     &-form {
@@ -102,6 +139,9 @@
         padding: 0 0 0 15px;
         border: none;
         box-sizing: border-box;
+        @include mobile {
+            width: 245px;
+        }
     }
 
     &-form_button {
@@ -126,6 +166,9 @@
         background-color: $white-color;
         margin: 0 10px 0 0;
         padding: 8px;
+        @include mobile {
+            margin: 40px 10px 40px 0;
+        }
     }
 
     &-icon:hover {

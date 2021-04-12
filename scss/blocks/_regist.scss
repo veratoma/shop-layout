@@ -1,5 +1,5 @@
 .registr {
-    &-forma {
+    &-form {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -82,7 +82,7 @@
 
     &_button:hover,
     &_button:focus,
-    &-forma input:hover {
+    &-form input:hover {
         outline: 0;
         box-shadow: $blue-color;
         border-color: $white-color;
