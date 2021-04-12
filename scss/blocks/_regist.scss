@@ -16,10 +16,16 @@
         flex-direction: row;
         margin: 32px 0 33px 0;
 
+        .radio:checked + .radio-ladel:before {
+            background: $dark-pink-color;
+        }
+
+        .radio:checked + .radio-ladel:after {
+            display: block;
+        }
+
         .radio {
-            &-input {
-                display: none;
-            }
+            display: none;
 
             &-ladel {
                 position: relative;
@@ -47,14 +53,6 @@
                 border-radius: 50%;
                 background: $white-color;
                 display: none;
-            }
-
-            &-ladel:checked + &-ladel:before {
-                background: $dark-pink-color;
-            }
-
-            &-ladel:checked + &-ladel:after {
-                display: block;
             }
         }
     }
