@@ -1,0 +1,154 @@
+.commodity {
+    @include blok();
+
+    &-title {
+        @include font(24px, 29px, 400);
+        color: $dark-pink-color;
+    }
+
+    &-blok {
+        display: flex;
+        flex-direction: row;
+        background-color: $pink1-color;
+        // max-width: 1600px;
+
+        // margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        height: 148px;
+        padding: 0 230px;
+        box-sizing: border-box;
+    }
+
+    &-transition {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-transition_text {
+        @include font(14px, 17px, 300);
+    }
+
+    &-transition_title {
+        @include font(14px, 17px, 700);
+        color: $dark-pink-color;
+    }
+
+    &-foto {
+        background-color: $white1-color;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-foto_img {
+        padding: 0 0 70px 0;
+    }
+
+    &-foto_button1,
+    &-foto_button2 {
+        width: 47px;
+        height: 47px;
+        background-color: $grey6-color;
+        border: 0;
+        position: relative;
+    }
+
+    &-foto_button1::before {
+        content: url(/img/arrow1.svg);
+        position: absolute;
+        left: 17px;
+        top: 12px;
+    }
+
+    &-foto_button2::before {
+        content: url(/img/arrow2.svg);
+        position: absolute;
+        left: 17px;
+        top: 12px;
+    }
+
+    &-parameters {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid $line-color;
+        margin-top: -65px;
+        background-color: $white-color;
+        width: 1141px;
+    }
+
+    &-parameters_title {
+        @include font(14px, 17px, 300);
+        color: $dark-pink-color;
+        margin-top: 65px;
+    }
+
+    &-parameters_line {
+        width: 63px;
+        background-color: $dark-pink-color;
+        height: 3px;
+        margin: 12px 0;
+    }
+
+    &-parameters_titleNew {
+        @include font(18px, 22px, 300);
+        color: $grey2-color;
+        margin-bottom: 49px;
+    }
+
+    &-parameters_text {
+        color: $grey3-color;
+        @include font(14px, 17px, 300);
+        width: 555px;
+        text-align: center;
+        margin-bottom: 33px;
+    }
+
+    &-parameters_price {
+        @include font(24px, 29px, 300);
+        color: $dark-pink-color;
+        margin-bottom: 65px;
+    }
+
+    &-parameters_lineNew {
+        width: 641px;
+        border: 1px solid $grey4-color;
+        margin-bottom: 65px;
+    }
+
+    &-parameters_choice {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &-parameters_choiceNew {
+        @include font(14px, 17px, 400);
+        margin-right: 42px;
+        color: $grey5-color;
+        margin-bottom: 49px;
+    }
+
+    &-parameters_button {
+        border: 1px solid $dark-pink-color;
+        color: $dark-pink-color;
+        padding: 14px 56px 14px 72px;
+        background: none;
+        @include font(16px, 19px, 400);
+        position: relative;
+        margin-bottom: 65px;
+    }
+
+    &-parameters_button::before {
+        content: url(/img/cart.svg);
+        position: absolute;
+        left: 22px;
+    }
+
+    &-product {
+        margin: 128px 0;
+    }
+}
