@@ -3,6 +3,9 @@
         max-width: 1600px;
         margin: 0 auto;
         background-color: $black-color;
+        @include tablet {
+            padding: 0 16px;
+        }
     }
 
     &_navigation {
@@ -43,11 +46,8 @@
     &_link {
         margin: 0 33px 0 0;
     }
-}
 
-@media (max-width: $tablet-width) {
-    .header {
-        padding: 0 16px;
+    @media (max-width: $mobile-width) {
         &_link {
             display: none;
             fill: none;
