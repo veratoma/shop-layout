@@ -1,11 +1,12 @@
 .registr {
+    @include title-block();
+    @include blok();
+
     &-form {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-
-    @include title-block();
 
     &-name {
         margin: 64px 0 0 0;
