@@ -1,11 +1,12 @@
 .registr {
+    @include title-block();
+    @include blok();
+
     &-form {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-
-    @include title-block();
 
     &-name {
         margin: 64px 0 0 0;
@@ -16,10 +17,16 @@
         flex-direction: row;
         margin: 32px 0 33px 0;
 
+        .radio:checked + .radio-ladel:before {
+            background: $dark-pink-color;
+        }
+
+        .radio:checked + .radio-ladel:after {
+            display: block;
+        }
+
         .radio {
-            &-input {
-                display: none;
-            }
+            display: none;
 
             &-ladel {
                 position: relative;
@@ -47,14 +54,6 @@
                 border-radius: 50%;
                 background: $white-color;
                 display: none;
-            }
-
-            &-ladel:checked + &-ladel:before {
-                background: $dark-pink-color;
-            }
-
-            &-ladel:checked + &-ladel:after {
-                display: block;
             }
         }
     }
