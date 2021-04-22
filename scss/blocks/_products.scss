@@ -12,6 +12,7 @@
         color: $dark-grey-color;
         margin-bottom: 48px;
         text-align: center;
+        position: relative;
     }
 
     &_list {
@@ -33,38 +34,50 @@
         @include mobile {
             width: 96%;
         }
-        .product {
-            &_description {
-                background-color: $grey-color;
-                padding: 25px 29px 20px 17px;
-            }
+    }
 
-            &_img {
-                display: block;
-                @include mobile {
-                    width: 96%;
-                }
-            }
+    &_butt {
+        border: 1px solid $white-color;
+        color: $white-color;
+        padding: 13px 17px 13px 51px;
+        background: none;
+        @include font(14px, 17px, 400);
+        position: absolute;
+        // margin-bottom: 65px;
+    }
 
-            &_title {
-                @include font(13px, 16px, 400);
-                text-transform: uppercase;
-                margin-bottom: 13px;
-                color: $black-color;
-            }
+    .product {
+        &_description {
+            background-color: $grey-color;
+            padding: 25px 29px 20px 17px;
+        }
 
-            &_text {
-                @include font(14px, 17px, 300);
-                margin-bottom: 18px;
-                color: $dark-grey-color;
-            }
-
-            &_price {
-                @include font(16px, 19px, 400);
-                color: $dark-pink-color;
+        &_img {
+            display: block;
+            @include mobile {
+                width: 96%;
             }
         }
+
+        &_title {
+            @include font(13px, 16px, 400);
+            text-transform: uppercase;
+            margin-bottom: 13px;
+            color: $black-color;
+        }
+
+        &_text {
+            @include font(14px, 17px, 300);
+            margin-bottom: 18px;
+            color: $dark-grey-color;
+        }
+
+        &_price {
+            @include font(16px, 19px, 400);
+            color: $dark-pink-color;
+        }
     }
+
     &_button {
         @include font(16px, 19px, 400);
         color: $dark-pink-color;
@@ -73,6 +86,7 @@
         padding: 14px 38px;
         border: solid;
         width: 220px;
+        transition: border-radius 1s;
     }
 
     &_button:active {
@@ -89,5 +103,9 @@
 
     &_button:focus {
         outline: 0;
+    }
+
+    &_button:hover {
+        border-radius: 30%;
     }
 }
