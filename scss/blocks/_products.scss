@@ -12,7 +12,7 @@
         color: $dark-grey-color;
         margin-bottom: 48px;
         text-align: center;
-        position: relative;
+        // position: relative;
     }
 
     &_list {
@@ -34,16 +34,6 @@
         @include mobile {
             width: 96%;
         }
-    }
-
-    &_butt {
-        border: 1px solid $white-color;
-        color: $white-color;
-        padding: 13px 17px 13px 51px;
-        background: none;
-        @include font(14px, 17px, 400);
-        position: absolute;
-        // margin-bottom: 65px;
     }
 
     .product {
@@ -76,6 +66,46 @@
             @include font(16px, 19px, 400);
             color: $dark-pink-color;
         }
+
+        &_button {
+            border: 1px solid $white-color;
+            color: $white-color;
+            padding: 13px 17px 13px 51px;
+            background: none;
+            @include font(14px, 17px, 400);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &_button::before {
+            content: url(/img/cart3.svg);
+            position: absolute;
+            top: 9px;
+            left: 11px;
+        }
+
+        &_img-cart {
+            position: relative;
+        }
+
+        &_button-overlay {
+            width: 100%;
+            min-height: 420px;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+        }
+
+        &_button,
+        &_button-overlay {
+            display: none;
+        }
+
+        &:hover .product_button,
+        &:hover .product_button-overlay {
+            display: block;
+        }
     }
 
     &_button {
@@ -106,6 +136,10 @@
     }
 
     &_button:hover {
-        border-radius: 30%;
+        border-radius: 30px;
+        transition: border-radius 1s;
+        background: 1s;
+        background-color: $dark-pink-color;
+        color: $white-color;
     }
 }
